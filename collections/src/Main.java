@@ -34,6 +34,7 @@ public class Main {
         monthSet.add(new Month("August"));
         System.out.println(monthSet.size());
 
+
         // EXERCISE 2
 
         List<Integer> intList = new ArrayList<>();
@@ -44,7 +45,6 @@ public class Main {
         intList.add(5);
 
         List<Integer> intListBackwards = new ArrayList<>();
-
         ListIterator<Integer> intIterator = intList.listIterator(intList.size());
         while (intIterator.hasPrevious()) {
             intListBackwards.add(intIterator.previous());

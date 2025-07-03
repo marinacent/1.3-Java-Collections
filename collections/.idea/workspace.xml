@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f69cbb23-45dd-4b9c-be3f-5fcf8d66e0c7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../nivell-1.3/nivell-1.3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nivell-1.3/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nivell-1.3/src/countries.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -55,6 +58,13 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../nivell-1.3/src" />
+      <recent name="$PROJECT_DIR$/../nivell-1.3" />
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f69cbb23-45dd-4b9c-be3f-5fcf8d66e0c7" name="Changes" comment="" />
