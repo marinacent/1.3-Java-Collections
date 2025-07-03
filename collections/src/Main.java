@@ -1,10 +1,10 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
+        // EXERCISE 1
+
         ArrayList<Month> months = new ArrayList<>();
         months.add(new Month("January"));
         months.add(new Month("February"));
@@ -33,6 +33,30 @@ public class Main {
         System.out.println(monthSet.size());
         monthSet.add(new Month("August"));
         System.out.println(monthSet.size());
+
+        // EXERCISE 2
+
+        List<Integer> intList = new ArrayList<>();
+        intList.add(1);
+        intList.add(2);
+        intList.add(3);
+        intList.add(4);
+        intList.add(5);
+
+        List<Integer> intListBackwards = new ArrayList<>();
+
+        ListIterator<Integer> intIterator = intList.listIterator(intList.size());
+        while (intIterator.hasPrevious()) {
+            intListBackwards.add(intIterator.previous());
+        }
+
+        for (int element : intList) {
+            System.out.println(element);
+        }
+
+        for (int element : intListBackwards) {
+            System.out.println(element);
+        }
 
     }
 }
