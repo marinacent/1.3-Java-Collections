@@ -1,16 +1,19 @@
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
-        Month jan = new Month("January");
-        Month feb = new Month("February");
-        Month mar = new Month("March");
-        Month apr = new Month("April");
-        Month may = new Month("May");
-        Month jun = new Month("June");
-        Month jul = new Month("July");
-        Month sep = new Month("September");
-        Month oct = new Month("October");
-        Month nov = new Month("November");
-        Month dec = new Month("December");
+        ArrayList<Month> months = new ArrayList<>();
+        months.add(new Month("January"));
+        months.add(new Month("February"));
+        months.add(new Month("March"));
+        months.add(new Month("April"));
+        months.add(new Month("May"));
+        months.add(new Month("June"));
+        months.add(new Month("July"));
+        months.add(new Month("September"));
+        months.add(new Month("October"));
+        months.add(new Month("November"));
+        months.add(new Month("December"));
     }
 }
