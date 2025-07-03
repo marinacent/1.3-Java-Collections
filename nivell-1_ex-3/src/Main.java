@@ -8,5 +8,8 @@ public class Main {
         HashMap<String,String> capitals = TextProcessor.fileToStringMap("countries.txt", " ");
         capitals = TextProcessor.mapReplace(capitals, "_", " ");
 
+        System.out.println("Please enter your username: ");
+        String username = scanner.nextLine();
+
     }
 }
