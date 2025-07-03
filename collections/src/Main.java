@@ -15,5 +15,11 @@ public class Main {
         months.add(new Month("October"));
         months.add(new Month("November"));
         months.add(new Month("December"));
+
+        months.add(7, new Month("August"));
+
+        for (Month month : months) {
+            System.out.println(month);
+        }
     }
 }
