@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Main {
 
@@ -19,7 +20,12 @@ public class Main {
         months.add(7, new Month("August"));
 
         for (Month month : months) {
-            System.out.println(month);
+            System.out.println(month.toString());
         }
+
+        HashSet<Month> monthSet = new HashSet<Month>(months);
+        System.out.println(monthSet.size());
+        monthSet.add(new Month("August"));
+        System.out.println(monthSet.size());
     }
 }
