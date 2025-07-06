@@ -2,13 +2,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-public class GameShowRound {
-    private String contestant;
+public class QuestionAnswer {
+    private String username;
     private HashMap<String, String> answerKey;
     private static Scanner scanner = new Scanner(System.in);
 
-    public GameShowRound(String contestant, HashMap<String, String> answerKey) {
-        this.contestant = contestant;
+    public QuestionAnswer(String username, HashMap<String, String> answerKey) {
+        this.username = username;
         this.answerKey = answerKey;
     }
 
@@ -22,7 +22,7 @@ public class GameShowRound {
             Random random = new Random();
             return keys.get(random.nextInt(keys.size()));
         } catch (IllegalStateException e) {
-            System.out.println("That was an empty map! Returning null");
+            System.out.println("The answer key was empty! Random question returns null");
             return null;
         }
     }
@@ -35,11 +35,13 @@ public class GameShowRound {
         int score = 0;
         for (int i = 0; i < questions; i++) {
             String q = this.getRandomQuestion();
-            System.out.println(q);
-            System.out.println("Enter answer:");
+            System.out.println(q + " : ");
             String a = scanner.nextLine();
             if (this.assessAnswer(q, a)) {
+                System.out.println("Correct!");
                 score++;
+            } else {
+                System.out.println("Incorrect answer. The capital of " + q + "is " + a );
             }
         }
         return score;
@@ -47,7 +49,7 @@ public class GameShowRound {
 
     public void generateOutput(int result, String path) {
         try (FileWriter writer = new FileWriter(path, true)) {
-            writer.write(this.contestant + " " + result + "\n");
+            writer.write(this.username + " " + result + "\n");
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

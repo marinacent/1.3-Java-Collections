@@ -18,7 +18,6 @@ public class Month {
             return false;
         }
 
-        // pattern variable instead??
         Month comparedMonth = (Month) compared;
 
         return this.name.equals(comparedMonth.name);

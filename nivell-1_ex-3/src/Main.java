@@ -13,10 +13,10 @@ public class Main {
 
         System.out.println(username + ", write the following countries' capitals:");
 
-        GameShowRound capitalsGame = new GameShowRound("marina", capitals);
-        int result = capitalsGame.playRound(10);
+        QuestionAnswer capitalsQuestions = new QuestionAnswer(username, capitals);
+        int result = capitalsQuestions.playRound(10);
         System.out.println(result);
-        capitalsGame.generateOutput(result, "output.txt");
+        capitalsQuestions.generateOutput(result, "output.txt");
 
 
     }
