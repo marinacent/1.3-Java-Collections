@@ -29,7 +29,9 @@ public class QuestionAnswer {
     }
 
     public boolean assessAnswer(String question, String answer) {
-        return answerKey.get(question).equals(answer);
+        String q = answerKey.get(question).toLowerCase();
+        String a = answer.toLowerCase();
+        return q.equals(a);
     }
 
     public int playRound(int questions) {
