@@ -15,17 +15,12 @@ public class QuestionAnswer {
 
 
     public String getRandomQuestion() {
-        try {
-            if (this.answerKey.isEmpty()) {
-                throw new IllegalStateException();
-            }
-            List<String> keys = new ArrayList<>(this.answerKey.keySet());
-            Random random = new Random();
-            return keys.get(random.nextInt(keys.size()));
-        } catch (IllegalStateException e) {
-            System.out.println("The answer key was empty! Random question returns null");
-            return null;
+        if (this.answerKey.isEmpty()) {
+            throw new IllegalStateException("The answer key is empty");
         }
+        List<String> keys = new ArrayList<>(this.answerKey.keySet());
+        Random random = new Random();
+        return keys.get(random.nextInt(keys.size()));
     }
 
     public boolean assessAnswer(String question, String answer) {

@@ -14,9 +14,12 @@ public class Main {
         System.out.println(username + ", write the following countries' capitals:");
 
         QuestionAnswer capitalsQuestions = new QuestionAnswer(username, capitals);
-        int result = capitalsQuestions.playRound(10);
-        capitalsQuestions.generateOutput(result, "output.txt");
-
+        try {
+            int result = capitalsQuestions.playRound(10);
+            capitalsQuestions.generateOutput(result, "output.txt");
+        } catch (IllegalStateException e) {
+            System.out.println(e.getMessage());
+        }
 
     }
 }
