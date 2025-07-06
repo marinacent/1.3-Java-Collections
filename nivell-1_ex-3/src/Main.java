@@ -15,7 +15,6 @@ public class Main {
 
         QuestionAnswer capitalsQuestions = new QuestionAnswer(username, capitals);
         int result = capitalsQuestions.playRound(10);
-        System.out.println(result);
         capitalsQuestions.generateOutput(result, "output.txt");
 
 

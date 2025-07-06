@@ -1,5 +1,6 @@
 import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class TextProcessor {
@@ -19,13 +20,13 @@ public class TextProcessor {
         return map;
     }
 
-    public static HashMap<String,String> mapReplace(HashMap<String,String> map, String old, String replacement) {
-        for (String key : map.keySet()) {
-            key.replace(old, replacement);
+    public static HashMap<String, String> mapReplace(HashMap<String, String> map, String old, String replacement) {
+        HashMap<String, String> modifiedMap = new HashMap<>();
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            String modifiedKey = entry.getKey().replace(old, replacement);
+            String modifiedValue = entry.getValue().replace(old, replacement);
+            modifiedMap.put(modifiedKey, modifiedValue);
         }
-        for (String value : map.values()) {
-            value.replace(old, replacement);
-        }
-        return map;
+        return modifiedMap;
     }
 }

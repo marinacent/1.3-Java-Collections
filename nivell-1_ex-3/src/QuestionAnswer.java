@@ -1,5 +1,6 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class QuestionAnswer {
@@ -33,17 +34,24 @@ public class QuestionAnswer {
 
     public int playRound(int questions) {
         int score = 0;
+        Set<String> askedQuestions = new HashSet<>();
+        String q;
         for (int i = 0; i < questions; i++) {
-            String q = this.getRandomQuestion();
-            System.out.println(q + " : ");
+            do {
+                q = this.getRandomQuestion();
+            } while (askedQuestions.contains(q));
+
+            askedQuestions.add(q);
+            System.out.println(q + ": ");
             String a = scanner.nextLine();
             if (this.assessAnswer(q, a)) {
                 System.out.println("Correct!");
                 score++;
             } else {
-                System.out.println("Incorrect answer. The capital of " + q + "is " + a );
+                System.out.println("Incorrect!");
             }
         }
+        System.out.println("Your score is " + score + "/" + questions);
         return score;
     }
 
