@@ -30,6 +30,7 @@ public class Main {
             System.out.println("1  Add person");
             System.out.println("2  Show people ordered by name (A-Z)");
             System.out.println("3  Show people ordered by name (Z-A)");
+            System.out.println("4  Show people ordered by surnames (A-Z)");
             System.out.println("0  Exit");
 
             while (!input.hasNextInt()) {

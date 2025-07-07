@@ -9,7 +9,7 @@ public class Person {
     private String dni;
     private static final List<Person> peopleList = new ArrayList<>();
 
-    public Person (String name, String surnames, String dni) {
+    public Person(String name, String surnames, String dni) {
         this.name = name;
         this.surnames = surnames;
         this.dni = dni;
@@ -20,15 +20,32 @@ public class Person {
     }
 
     public static void addPerson(Scanner scanner) {
+        String name;
+        String surnames;
+        String dni;
+
         System.out.println("Person's name: ");
-        String name = scanner.nextLine();
+        name = scanner.nextLine();
+        while (name.isEmpty()) {
+            System.out.println("Please enter the person's name: ");
+            name = scanner.nextLine();
+        }
+
         System.out.println("Person's surnames: ");
-        String surnames = scanner.nextLine();
+        surnames = scanner.nextLine();
+        while (surnames.isEmpty()) {
+            System.out.println("Please enter the person's surnames: ");
+            surnames = scanner.nextLine();
+        }
         System.out.println("Person's DNI: ");
-        String dni = scanner.nextLine();
+        dni = scanner.nextLine();
+        while (dni.length() != 9) {
+            System.out.println("Please enter a valid DNI: ");
+            dni = scanner.nextLine();
+        }
+
         peopleList.add(new Person(name, surnames, dni));
         System.out.println("New person added: " + name + " " + surnames + ", DNI " + dni + "\n");
-
     }
 
     public static void printPeople() {
@@ -37,6 +54,7 @@ public class Person {
             System.out.println(person.name + "        " + person.surnames +
                     "             " + person.dni);
         }
+        System.out.println();
     }
 
     public static void showDescendingName() {
