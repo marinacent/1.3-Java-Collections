@@ -23,6 +23,10 @@ public class Person {
         return surnames;
     }
 
+    public static void addPerson(String name, String surnames, String dni) {
+        peopleList.add(new Person(name, surnames, dni));
+    }
+
     public static void addPerson(Scanner scanner) {
         String name;
         String surnames;

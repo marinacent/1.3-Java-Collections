@@ -9,12 +9,11 @@ public class Main {
         Scanner input = new Scanner(System.in);
         int option;
 
-        ArrayList<Person> peopleList = new ArrayList<>();
         try {
             ArrayList<String[]> people = CsvReader.read("src/people.csv", ";");
             for (String[] person : people) {
                 if (person.length >= 3) {
-                    peopleList.add(new Person(person[0], person[1], person[2]));
+                    Person.addPerson(person[0], person[1], person[2]);
                 } else {
                     System.out.println("Skipping invalid line: " + Arrays.toString(person));
                 }
