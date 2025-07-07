@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class CsvReader {
 
-    public String[] read(String path, String delimiter) throws IOException {
+    public static String[] read(String path, String delimiter) throws IOException {
             BufferedReader reader = new BufferedReader(new FileReader(path));
             String line;
             String[] values = null;
