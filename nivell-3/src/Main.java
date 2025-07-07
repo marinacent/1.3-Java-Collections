@@ -36,6 +36,13 @@ public class Main {
             }
 
             option = input.nextInt();
+            input.nextLine();
+
+            switch (option) {
+                case 1:
+                    Person.addPerson(input);
+                    break;
+            }
             
         } while (option != 0);
 
