@@ -15,11 +15,6 @@ public class Person {
         this.dni = dni;
     }
 
-    public Person(String name, String surnames) {
-        this.name = name;
-        this.surnames = surnames;
-    }
-
     public String getName() {
         return name;
     }
@@ -66,10 +61,9 @@ public class Person {
     }
 
     public static void printPeople() {
-        System.out.println("___Name___ ____Surnames___ __NIF__");
+        System.out.println("___Name___   ____Surnames___    __NIF__");
         for (Person person : peopleList) {
-            System.out.println(person.name + "        " + person.surnames +
-                    "             " + person.dni);
+            System.out.printf("%-12s %-17s %-10s\n", person.name, person.surnames, person.dni);
         }
         System.out.println();
     }
