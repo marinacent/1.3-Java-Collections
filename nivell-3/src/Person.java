@@ -19,6 +19,10 @@ public class Person {
         return name;
     }
 
+    public String getSurnames() {
+        return surnames;
+    }
+
     public static void addPerson(Scanner scanner) {
         String name;
         String surnames;
@@ -63,8 +67,16 @@ public class Person {
         Person.printPeople();
     }
 
-    public static void showAscendingName() {
-        peopleList.sort(Comparator.comparing((Person::getName), String.CASE_INSENSITIVE_ORDER));
+    public static void sortAscending(String sortBy) {
+        switch (sortBy) {
+            case "name":
+                peopleList.sort(Comparator.comparing((Person::getName), String.CASE_INSENSITIVE_ORDER));
+                break;
+
+            case "surnames":
+                peopleList.sort(Comparator.comparing((Person::getSurnames), String.CASE_INSENSITIVE_ORDER));
+                break;
+        }
         Person.printPeople();
     }
 

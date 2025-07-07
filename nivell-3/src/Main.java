@@ -1,4 +1,3 @@
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -47,13 +46,18 @@ public class Main {
                     break;
 
                 case 2:
-                    Person.showAscendingName();
+                    Person.sortAscending("name");
                     break;
 
                 case 3:
                     Person.showDescendingName();
                     break;
+
+                case 4:
+                    Person.sortAscending("surnames");
+                    break;
             }
+
             
         } while (option != 0);
 
