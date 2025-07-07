@@ -9,6 +9,19 @@ public class Restaurant {
         this.rating = rating;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    @Override
+    public String toString() {
+        return "name: " + this.name + ", rating: " + this.rating;
+    }
+
     @Override
     public boolean equals(Object compared) {
         if(!(compared instanceof Restaurant comparedRestaurant)) { return false; }
