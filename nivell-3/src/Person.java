@@ -31,22 +31,23 @@ public class Person {
 
     }
 
-    public static void showAscendingName() {
-        /* Restaurant[] restaurantArray = new Restaurant[restaurants.size()];
-        restaurants.toArray(restaurantArray);
-        Arrays.sort(restaurantArray, Comparator.comparing(Restaurant::getName)
-                .thenComparing(Restaurant::getRating, Comparator.reverseOrder()));
-
-        for (Restaurant restaurant : restaurantArray) {
-            System.out.println(restaurant);
-        }
-        */
-        peopleList.sort(Comparator.comparing((Person::getName), String.CASE_INSENSITIVE_ORDER));
+    public static void printPeople() {
         System.out.println("___Name___ ____Surnames___ __NIF__");
         for (Person person : peopleList) {
             System.out.println(person.name + "        " + person.surnames +
-                    "      " + person.dni);
+                    "             " + person.dni);
         }
+    }
+
+    public static void showDescendingName() {
+        peopleList.sort(Comparator.comparing((Person::getName),
+                String.CASE_INSENSITIVE_ORDER).reversed());
+        Person.printPeople();
+    }
+
+    public static void showAscendingName() {
+        peopleList.sort(Comparator.comparing((Person::getName), String.CASE_INSENSITIVE_ORDER));
+        Person.printPeople();
     }
 
 }
