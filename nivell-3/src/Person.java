@@ -15,6 +15,11 @@ public class Person {
         this.dni = dni;
     }
 
+    public Person(String name, String surnames) {
+        this.name = name;
+        this.surnames = surnames;
+    }
+
     public String getName() {
         return name;
     }
