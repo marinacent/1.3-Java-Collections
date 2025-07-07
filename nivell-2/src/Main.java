@@ -8,10 +8,10 @@ public class Main {
 
         // EXERCICI 1
 
-        Restaurant kobuta = new Restaurant("kobuta", 9);
-        Restaurant queviuresSerra = new Restaurant("queviuresSerra", 10);
-        Restaurant queviures = new Restaurant("queviuresSerra", 10);
-        Restaurant serra = new Restaurant("queviuresSerra", 7);
+        Restaurant kobuta = new Restaurant("Kobuta", 9);
+        Restaurant queviuresSerra = new Restaurant("Queviures Serra", 10);
+        Restaurant queviures = new Restaurant("Queviures Serra", 10);
+        Restaurant serra = new Restaurant("Queviures Serra", 7);
 
         HashSet<Restaurant> restaurants = new HashSet<Restaurant>();
         restaurants.add(kobuta);
