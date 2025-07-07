@@ -28,6 +28,7 @@ public class Main {
         do {
             System.out.println("Pick an option: ");
             System.out.println("1  Add person");
+            System.out.println("2  Show people ordered by name (A-Z)");
             System.out.println("0  Exit");
 
             while (!input.hasNextInt()) {
@@ -41,6 +42,10 @@ public class Main {
             switch (option) {
                 case 1:
                     Person.addPerson(input);
+                    break;
+
+                case 2:
+                    Person.showAscendingName();
                     break;
             }
             
