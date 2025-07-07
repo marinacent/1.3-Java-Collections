@@ -70,9 +70,18 @@ public class Person {
         System.out.println();
     }
 
-    public static void showDescendingName() {
-        peopleList.sort(Comparator.comparing((Person::getName),
-                String.CASE_INSENSITIVE_ORDER).reversed());
+    public static void sortDescending(String sortBy) {
+        switch (sortBy) {
+            case "name":
+                peopleList.sort(Comparator.comparing((Person::getName),
+                        String.CASE_INSENSITIVE_ORDER).reversed());
+                break;
+
+            case "surnames":
+                peopleList.sort(Comparator.comparing((Person::getSurnames),
+                        String.CASE_INSENSITIVE_ORDER).reversed());
+                break;
+        }
         Person.printPeople();
     }
 

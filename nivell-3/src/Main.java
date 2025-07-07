@@ -27,6 +27,7 @@ public class Main {
             System.out.println("2  Show people ordered by name (A-Z)");
             System.out.println("3  Show people ordered by name (Z-A)");
             System.out.println("4  Show people ordered by surnames (A-Z)");
+            System.out.println("5  Show people ordered by surnames (Z-A)");
             System.out.println("0  Exit");
 
             while (!input.hasNextInt()) {
@@ -47,11 +48,15 @@ public class Main {
                     break;
 
                 case 3:
-                    Person.showDescendingName();
+                    Person.sortDescending("name");
                     break;
 
                 case 4:
                     Person.sortAscending("surnames");
+                    break;
+
+                case 5:
+                    Person.sortDescending("surnames");
                     break;
             }
 
