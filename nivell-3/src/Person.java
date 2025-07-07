@@ -28,6 +28,10 @@ public class Person {
         return surnames;
     }
 
+    public String getDni() {
+        return dni;
+    }
+
     public static void addPerson(String name, String surnames, String dni) {
         peopleList.add(new Person(name, surnames, dni));
     }
@@ -81,6 +85,11 @@ public class Person {
                 peopleList.sort(Comparator.comparing((Person::getSurnames),
                         String.CASE_INSENSITIVE_ORDER).reversed());
                 break;
+
+            case "dni":
+                peopleList.sort(Comparator.comparing((Person::getDni),
+                        String.CASE_INSENSITIVE_ORDER).reversed());
+                break;
         }
         Person.printPeople();
     }
@@ -88,11 +97,18 @@ public class Person {
     public static void sortAscending(String sortBy) {
         switch (sortBy) {
             case "name":
-                peopleList.sort(Comparator.comparing((Person::getName), String.CASE_INSENSITIVE_ORDER));
+                peopleList.sort(Comparator.comparing((Person::getName),
+                        String.CASE_INSENSITIVE_ORDER));
                 break;
 
             case "surnames":
-                peopleList.sort(Comparator.comparing((Person::getSurnames), String.CASE_INSENSITIVE_ORDER));
+                peopleList.sort(Comparator.comparing((Person::getSurnames),
+                        String.CASE_INSENSITIVE_ORDER));
+                break;
+
+            case "dni":
+                peopleList.sort(Comparator.comparing((Person::getDni),
+                        String.CASE_INSENSITIVE_ORDER));
                 break;
         }
         Person.printPeople();
