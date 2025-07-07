@@ -11,7 +11,7 @@ public class Person {
         this.dni = dni;
     }
 
-    public Person(String[] values) {
-        this(values[0], values[1], values[2]);
+    public String getName() {
+        return name;
     }
 }
