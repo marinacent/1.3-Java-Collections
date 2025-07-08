@@ -14,11 +14,9 @@ public class Month {
 
     @Override
     public boolean equals(Object compared) {
-        if (!(compared instanceof Month)) {
+        if (!(compared instanceof Month comparedMonth)) {
             return false;
         }
-
-        Month comparedMonth = (Month) compared;
 
         return this.name.equals(comparedMonth.name);
     }
