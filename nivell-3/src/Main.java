@@ -4,11 +4,12 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
+        String peoplePath = "src/people.csv";
         Scanner input = new Scanner(System.in);
         int option;
 
         try {
-            ArrayList<String[]> people = CsvReader.read("src/people.csv", ";");
+            ArrayList<String[]> people = CsvReader.read(peoplePath, ";");
             for (String[] person : people) {
                 if (person.length >= 3) {
                     Person.addPerson(person[0], person[1], person[2]);
