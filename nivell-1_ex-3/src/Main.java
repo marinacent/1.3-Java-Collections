@@ -3,9 +3,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        String countriesPath = "nivell-1_ex-3/src/countries.txt";
         Scanner scanner = new Scanner(System.in);
 
-        HashMap<String,String> capitalsRaw = TextProcessor.fileToStringMap("countries.txt", " ");
+        HashMap<String,String> capitalsRaw = TextProcessor.fileToStringMap(countriesPath, " ");
         HashMap<String,String> capitals = TextProcessor.mapReplace(capitalsRaw, "_", " ");
 
         System.out.println("Please enter your username: ");

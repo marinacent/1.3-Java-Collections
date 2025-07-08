@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        String peoplePath = "src/people.csv";
+        String peoplePath = "nivell-3/src/people.csv";
         Scanner input = new Scanner(System.in);
         int option;
 
