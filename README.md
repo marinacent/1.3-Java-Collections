@@ -61,6 +61,4 @@ Java 21
 
 ## ▶️ Run
 
-1. Open the folders in your IDE.
-2. Make sure your current directory is "1.3-Java-Collections-main". Otherwise, change the value of the variables *COUNTRIES_PATH* and *OUTPUT_PATH* in *nivell-1_ex-3* and *PEOPLE_PATH* in *nivell-3* to make sure the path to the files is correct.
-3. Run the Main files.
+Open the project in your IDE and run the Main files.
