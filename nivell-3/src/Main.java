@@ -6,12 +6,12 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        String peoplePath = "nivell-3/src/people.csv";
+        String PEOPLE_PATH = "nivell-3/src/people.csv";
         Scanner input = new Scanner(System.in);
         int option;
 
         try {
-            ArrayList<String[]> people = CsvReader.read(peoplePath, ";");
+            ArrayList<String[]> people = CsvReader.read(PEOPLE_PATH, ";");
             for (String[] person : people) {
                 if (person.length >= 3) {
                     Person.addPerson(person[0], person[1], person[2]);
