@@ -6,7 +6,7 @@
 
 #### Exercises 1 and 2
 
-1. Create a *Month* class with a "name" attribute.
+1. Create a Month class with a "name" attribute.
 2. Add 11 Month objects (all months except “August”) to an ArrayList.
 3. Insert the missing “August” object in its correct position and show that the ArrayList has the correct month order.
 4. Convert the ArrayList to a HashSet and ensure that duplicates are not allowed.
@@ -44,3 +44,23 @@ Given a file called countries.txt that contains pairs of countries and their cap
    - Add a person.
    - Show people sorted by name, surnames or DNI (ascending or descending order).
    - Exit.
+  
+## 💻 Technologies used
+
+Java 21
+
+## 📋 Requirements
+
+Java 21
+
+## 🛠️ Set up
+
+1. Clone repository: -> git clone
+2. Access project repository: cd 1.3-Collections
+3. The *collections* folder contains level 1 exercises 1 and 2; *nivell-1_ex-3* contains level 1 exercise 3; *nivell-2* contains level 2; *nivell-3* contains level 3.
+
+## ▶️ Run
+
+1. Open the folders in your IDE.
+2. Make sure your current directory is "1.3-Java-Collections-main". Otherwise, change the value of the variables *countriesPath* in *nivell-1_ex-3* and *peoplePath* in *nivell-3* to make sure the path to the files is correct.
+3. Run the Main files.
