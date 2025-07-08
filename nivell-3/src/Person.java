@@ -68,25 +68,6 @@ public class Person {
         System.out.println();
     }
 
-    public static void sortDescending(String sortBy) {
-        switch (sortBy) {
-            case "name":
-                peopleList.sort(Comparator.comparing((Person::getName),
-                        String.CASE_INSENSITIVE_ORDER).reversed());
-                break;
-
-            case "surnames":
-                peopleList.sort(Comparator.comparing((Person::getSurnames),
-                        String.CASE_INSENSITIVE_ORDER).reversed());
-                break;
-
-            case "dni":
-                peopleList.sort(Comparator.comparing((Person::getDni),
-                        String.CASE_INSENSITIVE_ORDER).reversed());
-                break;
-        }
-        Person.printPeople();
-    }
 
     public static void sortAscending(String sortBy) {
         switch (sortBy) {
@@ -103,6 +84,26 @@ public class Person {
             case "dni":
                 peopleList.sort(Comparator.comparing((Person::getDni),
                         String.CASE_INSENSITIVE_ORDER));
+                break;
+        }
+        Person.printPeople();
+    }
+
+    public static void sortDescending(String sortBy) {
+        switch (sortBy) {
+            case "name":
+                peopleList.sort(Comparator.comparing((Person::getName),
+                        String.CASE_INSENSITIVE_ORDER).reversed());
+                break;
+
+            case "surnames":
+                peopleList.sort(Comparator.comparing((Person::getSurnames),
+                        String.CASE_INSENSITIVE_ORDER).reversed());
+                break;
+
+            case "dni":
+                peopleList.sort(Comparator.comparing((Person::getDni),
+                        String.CASE_INSENSITIVE_ORDER).reversed());
                 break;
         }
         Person.printPeople();
