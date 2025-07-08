@@ -16,7 +16,7 @@ public class Main {
 
         QuestionAnswer capitalsQuestions = new QuestionAnswer(username, capitals);
         try {
-            int result = capitalsQuestions.playRound(10);
+            int result = capitalsQuestions.playRound(10, scanner);
             capitalsQuestions.generateOutput(result, "output.txt");
         } catch (IllegalStateException e) {
             System.out.println(e.getMessage());

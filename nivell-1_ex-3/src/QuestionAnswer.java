@@ -6,7 +6,6 @@ import java.util.*;
 public class QuestionAnswer {
     private String username;
     private HashMap<String, String> answerKey;
-    private static Scanner scanner = new Scanner(System.in);
 
     public QuestionAnswer(String username, HashMap<String, String> answerKey) {
         this.username = username;
@@ -29,7 +28,7 @@ public class QuestionAnswer {
         return q.equals(a);
     }
 
-    public int playRound(int questions) {
+    public int playRound(int questions, Scanner scanner) {
         int score = 0;
         Set<String> askedQuestions = new HashSet<>();
         String q;
